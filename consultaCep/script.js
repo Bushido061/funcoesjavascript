@@ -7,7 +7,7 @@ async function consultarCEP() {
   const url = `https://viacep.com.br/ws/${cep}/json/`;
 
   const resposta = await fetch(url);
-  const dados = await resposta.json();
+  const dados = await resposta.json();  
 
   if (!dados.erro) {
     document.getElementById("cidade").value = dados.localidade;
